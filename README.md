@@ -128,6 +128,17 @@ ai-engineering-assistant/
 * Streamlit Cloud Deployment
 * Authentication and User Profiles
 
+
+## Installation
+
+git clone <repo-url>
+
+cd ai-engineering-assistant
+
+pip install -r requirements.txt
+
+streamlit run app.py
+
 ## Author
 
 Surbhi Rajput
