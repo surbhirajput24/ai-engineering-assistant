@@ -1,6 +1,6 @@
 # AI Engineering Assistant
 
-🚀 Live Demo: https://your-streamlit-url.streamlit.app
+🚀 Live Demo: https://ai-engineering-assistant-a4d2ebg35dsonruefyizkl.streamlit.app/
 
 
 
