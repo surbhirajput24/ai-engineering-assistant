@@ -16,20 +16,40 @@ from src.repository_analyzer import (
 )
 
 
-def create_prompt_for_file(file_type, file_name, content):
+def create_prompt_for_file(
+    file_type,
+    file_name,
+    content,
+    user_instruction
+):
     if file_type == "BUILD_LOG":
         build_error_type = classify_build_error(content)
-        st.write(f"Detected Android Error Type: {build_error_type}")
-        return build_android_expert_prompt(build_error_type, content)
 
-    return build_prompt(file_type, file_name, content)
+        st.write(f"Detected Android Error Type: {build_error_type}")
+
+        return build_android_expert_prompt(
+            build_error_type,
+            content,
+            user_instruction
+        )
+
+    else:
+        return build_prompt(
+            file_type,
+            file_name,
+            content,
+            user_instruction
+        )
 
 
 st.sidebar.title("AI Engineering Assistant")
 st.sidebar.write("Analyze code and Android build errors using AI.")
 st.sidebar.write("Current Version: 1.0")
 
-selected_model = st.sidebar.selectbox("Select AI Provider", ["Gemini", "OpenAI"])
+selected_model = st.sidebar.selectbox(
+    "Select AI Provider",
+    ["Gemini", "OpenAI"]
+)
 
 max_files_to_analyze = st.sidebar.slider(
     "Files to Analyze from GitHub Repo",
@@ -42,6 +62,11 @@ st.title("AI Engineering Assistant")
 st.write("Welcome Surbhi 🚀")
 st.write("Analyze code, Android build errors and GitHub repositories using AI.")
 st.write(f"Selected Provider: {selected_model}")
+
+user_instruction = st.text_area(
+    "What do you want AI to focus on?",
+    placeholder="If You want to give any specific prompt"
+)
 
 
 st.header("GitHub Repository Analysis")
@@ -83,6 +108,7 @@ if repo_url:
                         file_type,
                         file_name,
                         github_file_content,
+                        user_instruction
                     )
 
                     with st.spinner(f"Analyzing {file_name}..."):
@@ -165,6 +191,7 @@ if repo_url:
                     file_type,
                     selected_file,
                     github_file_content,
+                    user_instruction
                 )
 
                 start_time = time.time()
@@ -202,7 +229,7 @@ st.header("Upload File Analysis")
 
 uploaded_file = st.file_uploader(
     "Upload a file",
-    type=["py", "java", "txt", "xml", "gradle"],
+    type=["py", "java", "txt", "xml", "gradle", "sql"],
 )
 
 if uploaded_file:
@@ -220,6 +247,7 @@ if uploaded_file:
             file_type,
             uploaded_file.name,
             content,
+            user_instruction
         )
 
         start_time = time.time()

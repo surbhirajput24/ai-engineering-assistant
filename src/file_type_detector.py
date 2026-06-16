@@ -17,5 +17,8 @@ def detect_file_type(file_name):
     elif file_name.endswith(".txt"):
         return "BUILD_LOG"
 
+    elif file_name.endswith(".sql"):
+        return "SQL_QUERY"
+
     else:
         return "UNKNOWN"

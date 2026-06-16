@@ -49,35 +49,44 @@ The application supports AI-powered code reviews, repository analysis, Android t
 
 ---
 
+
+## Screenshots
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### GitHubRepository 
+
+![Git HUB Repository ](screenshots/GitHubRepo.png)
+
+### GitHubRepository Analysis
+
+![Android Expert Mode](screenshots/GithubRepoAnalysis.png)
+
+### File Upload Analysis
+
+![SQL Analysis](screenshots/file_upload_analysis.png)
+
 ## Architecture
 
+```text
+User
+  ↓
 Streamlit UI
-
-↓
-
-GitHub API / File Upload
-
-↓
-
+  ↓
+File Upload / GitHub API
+  ↓
 File Type Detection
-
-↓
-
+  ↓
 Prompt Builder
-
-↓
-
+  ↓
 LLM Factory
-
-↓
-
+  ↓
 Gemini / OpenAI
-
-↓
-
-Analysis Reports
-
----
+  ↓
+Analysis Report
+```
 
 ## Technology Stack
 

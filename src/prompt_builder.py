@@ -28,12 +28,16 @@ HIGH / MEDIUM / LOW
 """
 
 
-def build_prompt(file_type, file_name, content):
+def build_prompt(file_type, file_name, content, user_instruction=""):
 
     if file_type == "JAVA_CODE":
 
         prompt = f"""
 You are a Senior Android Engineer with 10+ years of experience.
+
+
+User Instruction:
+{user_instruction}
 
 Review the Java code for:
 1. Bugs
@@ -59,6 +63,10 @@ JAVA CODE:
         prompt = f"""
 You are a Senior Python Engineer.
 
+User Instruction:
+{user_instruction}
+
+
 Review the Python code for:
 1. Bugs
 2. Logic Errors
@@ -80,7 +88,8 @@ PYTHON CODE:
 
         prompt = f"""
 You are a Senior Android Build Engineer.
-
+User Instruction:
+{user_instruction}
 Analyze this build failure.
 
 Identify:
@@ -97,11 +106,39 @@ BUILD LOG:
 {content}
 """
 
+
+    elif file_type == "SQL_QUERY":
+        prompt = f"""
+    You are a Senior Database Engineer and SQL Performance Reviewer.
+User Instruction:
+{user_instruction}
+    Review this SQL query for:
+    1. Syntax issues
+    2. Performance problems
+    3. Missing WHERE conditions
+    4. Risky SELECT * usage
+    5. Index recommendations
+    6. Security risks like SQL injection
+    7. Banking/enterprise database best practices
+
+    {COMMON_OUTPUT_FORMAT}
+
+    FILE NAME:
+    {file_name}
+
+    SQL QUERY:
+    {content}
+    """
+
+
+
+
     elif file_type == "ANDROID_XML":
 
         prompt = f"""
 You are a Senior Android Engineer.
-
+User Instruction:
+{user_instruction}
 Review this Android XML file.
 
 Check for:
@@ -123,7 +160,8 @@ XML CONTENT:
 
         prompt = f"""
 You are a Senior Android Build Engineer.
-
+User Instruction:
+{user_instruction}
 Review this Gradle file.
 
 Check for:
@@ -145,7 +183,8 @@ GRADLE CONTENT:
 
         prompt = f"""
 You are a Senior Software Engineer.
-
+User Instruction:
+{user_instruction}
 Review this file.
 
 {COMMON_OUTPUT_FORMAT}
@@ -196,12 +235,17 @@ BUILD LOG:
 
     return prompt
 
-def build_android_expert_prompt(build_error_type, content):
+def build_android_expert_prompt(
+    build_error_type,
+    content,
+    user_instruction=""
+):
     prompt = f"""
 You are a Senior Android Build Engineer and Android Studio troubleshooting expert.
 
 Analyze the following Android build error.
-
+USER INSTRUCTION:
+{user_instruction}
 Android Error Type:
 {build_error_type}
 
