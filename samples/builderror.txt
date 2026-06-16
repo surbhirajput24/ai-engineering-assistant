@@ -1,0 +1,3 @@
+Namespace not specified.
+Specify a namespace in the module's build file.
+See https://d.android.com/r/tools/upgrade-assistant/set-namespace

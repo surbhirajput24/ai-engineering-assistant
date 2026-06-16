@@ -1,0 +1,39 @@
+[2026-06-14 22:18:24] Analysis started
+[2026-06-14 22:18:24] Total files found: 3
+[2026-06-14 22:18:24] Started analyzing file: LoginCode.java
+[2026-06-14 22:18:24] Detected file type for LoginCode.java: JAVA_CODE
+[2026-06-14 22:18:34] Successfully analyzed file: LoginCode.java
+[2026-06-14 22:18:34] Report saved for LoginCode.java: reports/LoginCode_java_report.md
+[2026-06-14 22:18:34] Processing time for LoginCode.java: 10.83 seconds
+[2026-06-14 22:18:34] Started analyzing file: builderror.txt
+[2026-06-14 22:18:34] Detected file type for builderror.txt: BUILD_LOG
+[2026-06-14 22:18:49] Successfully analyzed file: builderror.txt
+[2026-06-14 22:18:49] Report saved for builderror.txt: reports/builderror_txt_report.md
+[2026-06-14 22:18:49] Processing time for builderror.txt: 14.49 seconds
+[2026-06-14 22:18:49] Started analyzing file: buggy_code.py
+[2026-06-14 22:18:49] Detected file type for buggy_code.py: PYTHON_CODE
+[2026-06-14 22:18:58] Successfully analyzed file: buggy_code.py
+[2026-06-14 22:18:58] Report saved for buggy_code.py: reports/buggy_code_py_report.md
+[2026-06-14 22:18:58] Processing time for buggy_code.py: 8.65 seconds
+[2026-06-14 22:18:58] Project summary saved: reports/project_summary.md
+[2026-06-14 22:18:58] Analysis completed
+[2026-06-14 22:25:24] Analysis started
+[2026-06-14 22:25:24] Total files found: 3
+[2026-06-14 22:25:24] Started analyzing file: LoginCode.java
+[2026-06-14 22:25:24] Detected file type for LoginCode.java: JAVA_CODE
+[2026-06-14 22:25:34] Successfully analyzed file: LoginCode.java
+[2026-06-14 22:25:34] Report saved for LoginCode.java: reports/LoginCode_java_report.md
+[2026-06-14 22:25:34] Processing time for LoginCode.java: 10.05 seconds
+[2026-06-14 22:25:34] Started analyzing file: builderror.txt
+[2026-06-14 22:25:34] Detected file type for builderror.txt: BUILD_LOG
+[2026-06-14 22:25:34] Build error type for builderror.txt: JAVA_COMPILE_ERROR
+[2026-06-14 22:25:41] Successfully analyzed file: builderror.txt
+[2026-06-14 22:25:41] Report saved for builderror.txt: reports/builderror_txt_report.md
+[2026-06-14 22:25:41] Processing time for builderror.txt: 7.05 seconds
+[2026-06-14 22:25:41] Started analyzing file: buggy_code.py
+[2026-06-14 22:25:41] Detected file type for buggy_code.py: PYTHON_CODE
+[2026-06-14 22:25:50] Successfully analyzed file: buggy_code.py
+[2026-06-14 22:25:50] Report saved for buggy_code.py: reports/buggy_code_py_report.md
+[2026-06-14 22:25:50] Processing time for buggy_code.py: 8.19 seconds
+[2026-06-14 22:25:50] Project summary saved: reports/project_summary.md
+[2026-06-14 22:25:50] Analysis completed
