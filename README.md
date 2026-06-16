@@ -54,19 +54,19 @@ The application supports AI-powered code reviews, repository analysis, Android t
 
 ### Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/Dashboard.png)
 
 ### GitHubRepository 
 
-![Git HUB Repository ](screenshots/GitHubRepo.png)
+![Git HUB Repository ](Screenshots/GitHubRepo.png)
 
 ### GitHubRepository Analysis
 
-![Android Expert Mode](screenshots/GithubRepoAnalysis.png)
+![Android Expert Mode](Screenshots/GithubRepoAnalysis.png)
 
 ### File Upload Analysis
 
-![SQL Analysis](screenshots/file_upload_analysis.png)
+![SQL Analysis](Screenshots/file_upload_analysis.png)
 
 ## Architecture
 
