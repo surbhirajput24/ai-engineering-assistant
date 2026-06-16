@@ -1,5 +1,11 @@
 # AI Engineering Assistant
 
+🚀 Live Demo: https://your-streamlit-url.streamlit.app
+
+
+
+# AI Engineering Assistant
+
 ## Overview
 
 AI Engineering Assistant is a Python and Streamlit based application that helps developers analyze source code, Android build errors, and GitHub repositories using Large Language Models (LLMs).
